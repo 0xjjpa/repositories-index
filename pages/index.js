@@ -16,6 +16,7 @@ export default class Index extends React.Component {
   render () {
     const { repos } = this.state
     const websites = repos.filter( repo => repo.split('.website').length > 1)
+    const contracts = repos.filter( repo => repo.split('.tech').length > 1)
     const publicProjects = repos.filter( repo => repo.split('MyBit').length > 1)
     const privateProjects = repos.filter( repo => repo.split('MyBit').length === 1)
 
@@ -26,6 +27,7 @@ export default class Index extends React.Component {
           {
             [
               { label: 'Websites', projects: websites }, 
+              { label: 'Contracts', projects: contracts }, 
               { label: 'External Projects', projects: publicProjects }, 
               { label: 'Other Projects', projects: privateProjects }
             ]
