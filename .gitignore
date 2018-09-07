@@ -67,7 +67,7 @@ typings/
 .nuxt
 
 # out build ooutput
-out
+build
 
 # vuepress build output
 .vuepress/dist
